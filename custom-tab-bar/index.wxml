@@ -1,0 +1,21 @@
+<!--component/dist/my-tabbar/my-tabbar.wxml-->
+<view class="container">
+
+  <!-- 左边的按钮 -->
+  <view catchtap="switchTab" style="color:{{currentIndex == 'left' ? slectedColor:color}}" data-postion="left" class="tab left">
+    <image style="width:50rpx;height:50rpx" src="{{currentIndex=='left' ? leftSlectIconUrl: leftIconUrl}}"></image>
+    <text>设备</text>
+  </view>
+  <view class="center">
+
+    <button bindtap="scan" style="width:100%" hover-class="button-hover" class="saoma">
+      <image class="btnImg" src="/assets/icon/saoma.png"></image>扫码
+    </button>
+  </view>
+
+  <!-- 右边的按钮 -->
+  <view style="color:{{currentIndex == 'right' ? slectedColor:color}}" catchtap="switchTab" data-postion="right" class="tab right ">
+    <image style="width:50rpx;height:50rpx" src="{{currentIndex=='right' ? rightSlectIconUrl: rightIconUrl}}"></image>
+    <text>我的</text>
+  </view>
+</view>
